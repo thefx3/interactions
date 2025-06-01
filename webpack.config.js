@@ -13,7 +13,7 @@ module.exports = {
   devtool: "eval-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html", // Important : bon chemin
+      template: "./src/template.html",
     }),
   ],
   module: {
@@ -37,6 +37,6 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,
-    port: 8080,
+    watchFiles: ["src/**/*.{html,js,css}"],
   },
 };
