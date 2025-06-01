@@ -1,15 +1,36 @@
 import "./styles.css";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.createElement("select");
-  const options = ["Option 1", "Option 2", "Option 3"];
-
-  options.forEach((option) => {
-    const opt = document.createElement("option");
-    opt.value = option;
-    opt.textContent = option;
-    dropdown.appendChild(opt);
+function dropdown(button) {
+  const elements = button.nextElementSibling;
+  if (!elements) {
+      console.error('No dropdown elements found.');
+      return;
+  }
+  button.addEventListener('click', () => {
+      Array.from(elements.children).forEach(element => {
+          if (element.classList.contains('show')) {
+              hideDropdown(element);
+          } else {
+              showDropdown(element);
+          }
+      });
   });
+}
 
-  document.body.appendChild(dropdown);
-});
+function showDropdown(elements) {
+  elements.classList.add('show');
+  elements.style.display = 'block';
+}
+function hideDropdown(elements) {
+  elements.classList.remove('show');
+  elements.style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropbtns = document.querySelectorAll('.dropbtn');
+      dropbtns.forEach(dropbtn => {
+          dropdown(dropbtn);
+      }
+  );
+}
+);

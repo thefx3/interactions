@@ -1,15 +1,70 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --background-color: #f4f4f4;
-  --text-color: #333;
-  --font-family: "Roboto", sans-serif;
+  --primary-color: #4CAF50;
+  --secondary-color: #f1f1f1;
+  --text-color: black;
+  --border-color: #ccc;
+}
+
+body, h1, .dropdown, .dropbtn {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  display: flex;
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 20px;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: top;
+}
+
+.dropdown {
+  flex-direction: column;
+  align-self: flex-start;
+  width: 300px;
+}
+
+.dropbtn {
+  font-size: 20px;
+  margin : 15px 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px 8px;
+  border: none;
+}
+
+.dropbtn:hover {
+  background-color: #3e8e41;
+  transform: scale(0.97);
+}
+
+.hidden {
+  font-size: xx-large;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  
+  border: 1px solid #ccc;
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+}
+
+a:hover {
+  background-color: #f1f1f1;
+  transform: scale(0.97);
 }
