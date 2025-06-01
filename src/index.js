@@ -1,4 +1,5 @@
 import "./styles.css";
+import "./styles_carousel.css";
 
 function dropdown(button) {
   const elements = button.nextElementSibling;
@@ -34,3 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 }
 );
+
+// Initialize the carousel

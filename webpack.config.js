@@ -32,4 +32,11 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    static: "./dist",
+    open: true,
+    hot: true,
+    liveReload: true,
+    port: 8080,
+  },
 };

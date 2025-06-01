@@ -1,0 +1,5 @@
+
+.container-carousel {
+    display: flex; 
+    flex-direction: row;
+}
