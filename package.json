@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thefx3/ui-interactions.git"
+    "url": "git+https://github.com/thefx3/interactions.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thefx3/ui-interactions/issues"
+    "url": "https://github.com/thefx3/interactions/issues"
   },
-  "homepage": "https://github.com/thefx3/ui-interactions#readme",
+  "homepage": "https://github.com/thefx3/interactions#readme",
   "devDependencies": {
     "@eslint/js": "^9.27.0",
     "css-loader": "^7.1.2",
