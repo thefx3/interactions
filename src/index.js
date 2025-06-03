@@ -37,3 +37,31 @@ document.addEventListener("DOMContentLoaded", () => {
 );
 
 // Initialize the carousel
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const slides = Array.from(track.children);
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const offset = -400 * currentIndex;
+    console.log(offset);
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    console.log(`Current Index: ${currentIndex}`);
+    console.log(`Total Slides: ${slides.length}`);
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    console.log(`Current Index: ${currentIndex}`);
+    console.log(`Total Slides: ${slides.length}`);
+    updateCarousel();
+  });
+});

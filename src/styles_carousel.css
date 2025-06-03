@@ -1,5 +1,59 @@
+/* styles_carousel.css */
+
 
 .container-carousel {
-    display: flex; 
-    flex-direction: row;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+    position: relative;
+    border: 1px solid red;
+
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(400px * 6); /* 6 images */
+    transition: transform 0.5s ease-in-out;
+  }
+
+.picture-carousel {
+    flex: 0 0 400px;
+    height: 400px;
+
+    img {
+        width: 400px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.container_btn {
+    margin-top : 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.carousel-btn {
+    /* background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; */
+
+  top: 50%;
+  transform: translateY(-5%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn:hover {
+    background-color: #3e8e41;
+    transform: scale(0.95);
 }
