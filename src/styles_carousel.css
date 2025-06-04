@@ -57,3 +57,30 @@
     background-color: #3e8e41;
     transform: scale(0.95);
 }
+
+.carousel-indicators {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.carousel-indicator {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.carousel-indicator:hover {
+    background-color: #3e8e41;
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+.active {
+    background-color: black;
+}
